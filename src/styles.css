@@ -1,0 +1,159 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #17231e;
+  background: #f8f8f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  --green: #087b4c;
+  --dark-green: #07583c;
+  --muted: #747d78;
+  --line: #e4e8e2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.page-shell { max-width: 1160px; padding: 0 42px; margin: 0 auto; }
+.topbar { height: 84px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: -.7px; line-height: 1; }
+.brand-light { color: #76817a; font-weight: 500; }
+.brand small { display: block; margin-top: 6px; font-family: 'DM Sans', sans-serif; color: #89928c; font-weight: 700; font-size: 8px; letter-spacing: 1.35px; }
+.brand-mark { width: 24px; height: 28px; display: flex; overflow: hidden; border-radius: 5px; box-shadow: 0 2px 5px #143c281c; }
+.brand-mark i { flex: 1; background: #087c4d; }
+.brand-mark i:nth-child(2) { background: #fff; }
+.top-link { display: inline-flex; align-items: center; gap: 8px; color: #47564e; font-size: 12px; font-weight: 600; transition: color .2s; }
+.top-link:hover { color: var(--green); }
+
+.hero { min-height: 385px; padding: 56px 0 50px; display: grid; grid-template-columns: 1fr 380px; align-items: center; gap: 32px; }
+.hero-copy { padding-bottom: 4px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; color: #758079; font-size: 9px; font-weight: 700; letter-spacing: 1.7px; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #16a66b; box-shadow: 0 0 0 4px #16a66b19; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin: 22px 0 17px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(52px, 7.1vw, 79px); line-height: .98; letter-spacing: -5.5px; font-weight: 600; }
+h1 span { color: var(--green); }
+.hero-intro { max-width: 440px; margin-bottom: 27px; color: #65716a; font-size: 14px; line-height: 1.75; }
+.hero-meta { display: flex; align-items: center; gap: 18px; color: #65716a; font-size: 11px; font-weight: 500; }
+.hero-meta > span:not(.meta-divider) { display: inline-flex; align-items: center; gap: 7px; }
+.hero-meta svg { color: #188056; }
+.meta-divider { width: 1px; height: 14px; background: #dce2dc; }
+
+.hero-art { position: relative; height: 272px; overflow: hidden; border-radius: 5px; background: #08764a; color: #fff; }
+.hero-art::before { position: absolute; content: ''; inset: 0; opacity: .18; background: repeating-linear-gradient(135deg, transparent 0 15px, #fff 16px, transparent 17px 30px); }
+.sun-disc { position: absolute; width: 190px; height: 190px; right: -18px; top: -79px; border: 1px solid #ffffff65; border-radius: 50%; box-shadow: 0 0 0 17px #ffffff0c, 0 0 0 34px #ffffff0c; }
+.art-number { position: absolute; top: 26px; left: 25px; font-family: 'Space Grotesk', sans-serif; font-size: 125px; line-height: 1; font-weight: 700; letter-spacing: -13px; color: #ffffffed; }
+.art-caption { position: absolute; left: 34px; bottom: 29px; font-size: 10px; font-weight: 700; line-height: 1.6; letter-spacing: 2px; }
+.art-lines { position: absolute; width: 125px; height: 83px; left: 172px; bottom: 26px; display: flex; align-items: flex-end; gap: 8px; opacity: .48; }
+.art-lines span { width: 13px; border: 1px solid white; border-bottom: none; border-radius: 30px 30px 0 0; }
+.art-lines span:nth-child(1) { height: 34px; }.art-lines span:nth-child(2) { height: 55px; }.art-lines span:nth-child(3) { height: 70px; }.art-lines span:nth-child(4) { height: 46px; }.art-lines span:nth-child(5) { height: 60px; }
+.art-stamp { position: absolute; right: 22px; bottom: 22px; padding: 10px 12px; border: 1px solid #ffffff8c; transform: rotate(7deg); color: #fff; font-size: 8px; font-weight: 600; line-height: 1.4; letter-spacing: 1.2px; text-align: center; }
+.art-stamp b { color: #c5ec6f; }
+
+.poll-section { padding: 31px 32px 25px; background: #fff; border: 1px solid #eaede8; border-radius: 7px; box-shadow: 0 8px 28px #1b39220a; }
+.section-heading { margin-bottom: 23px; display: flex; align-items: flex-end; justify-content: space-between; }
+.section-eyebrow { margin-bottom: 8px; font-size: 8px; letter-spacing: 1.6px; }
+h2 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 25px; line-height: 1.2; letter-spacing: -.9px; font-weight: 600; }
+.poll-tag { padding: 6px 9px; border: 1px solid #dce9e0; border-radius: 3px; color: #3d7656; font-size: 8px; font-weight: 700; letter-spacing: .9px; }
+.candidate-list { display: grid; gap: 10px; }
+.candidate-card { position: relative; min-height: 88px; padding: 14px 17px; display: flex; align-items: center; gap: 15px; border: 1px solid #e6eae5; border-radius: 5px; cursor: pointer; transition: border-color .18s, background .18s, box-shadow .18s; }
+.candidate-card:hover { border-color: #a9cbb7; background: #fcfefc; }
+.candidate-card.is-selected { border-color: #168155; background: #f5fbf7; box-shadow: 0 0 0 1px #168155; }
+.candidate-card.has-results { cursor: default; min-height: 97px; padding-bottom: 20px; }
+.candidate-card.has-results:hover { border-color: #e6eae5; background: #fff; }
+.candidate-card.has-results.is-selected { border-color: #168155; background: #f5fbf7; }
+.candidate-card input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.candidate-card input:focus-visible + .candidate-avatar { outline: 3px solid #95c9a9; outline-offset: 3px; }
+.candidate-avatar { flex: 0 0 48px; height: 48px; position: relative; display: grid; place-items: center; border-radius: 50%; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; }
+.candidate-avatar.green { color: #08744a; background: #e2f1e7; }.candidate-avatar.blue { color: #315e8a; background: #e5edf6; }.candidate-avatar.red { color: #a8504f; background: #f6e8e5; }
+.candidate-avatar i { position: absolute; right: -3px; bottom: -2px; width: 17px; height: 17px; display: grid; place-items: center; border: 2px solid #fff; border-radius: 50%; background: #e9ede9; color: #758079; font-family: 'DM Sans', sans-serif; font-size: 6px; font-style: normal; font-weight: 700; }
+.candidate-info { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 5px; }
+.candidate-name { color: #223029; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: -.25px; }
+.candidate-detail { color: #78817b; font-size: 10px; line-height: 1.4; }
+.party-pill { min-width: 41px; padding: 5px 7px; border-radius: 3px; font-size: 8px; line-height: 1; font-weight: 700; text-align: center; letter-spacing: .6px; }
+.party-pill.green { color: #08744a; background: #eaf5ed; }.party-pill.blue { color: #315e8a; background: #edf2f8; }.party-pill.red { color: #a8504f; background: #f8efed; }
+.radio-indicator { width: 19px; height: 19px; flex: 0 0 19px; display: grid; place-items: center; border: 1px solid #cbd3cc; border-radius: 50%; color: white; }
+.radio-indicator.checked { border-color: var(--green); background: var(--green); }
+.form-footer { padding-top: 19px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.form-note { display: flex; align-items: center; gap: 8px; color: #78817b; font-size: 10px; }
+.form-note svg { flex: 0 0 auto; color: #83978b; }
+.vote-button { min-height: 42px; padding: 0 17px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: 4px; background: #087b4c; color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; transition: background .2s, transform .2s; }
+.vote-button:hover { background: #065e3a; transform: translateY(-1px); }
+.vote-button:focus-visible, .top-link:focus-visible { outline: 3px solid #8ac8a4; outline-offset: 3px; }
+.form-message { margin: 12px 0 0; color: #a33f38; font-size: 11px; }
+.success-banner { margin: -5px 0 16px; padding: 11px 13px; display: flex; align-items: center; gap: 10px; border: 1px solid #dcefe1; border-radius: 4px; background: #f4fbf5; color: #52665a; font-size: 10px; line-height: 1.5; }
+.success-banner strong { color: #17613e; }
+.success-icon { width: 23px; height: 23px; flex: 0 0 23px; display: grid; place-items: center; border-radius: 50%; background: #dff1e4; color: #14764a; }
+.result-value { min-width: 49px; color: #25342b; font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; text-align: right; }
+.result-value small { display: block; margin-top: 3px; color: #8a928c; font-family: 'DM Sans', sans-serif; font-size: 8px; font-weight: 500; }
+.result-track { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; overflow: hidden; border-radius: 0 0 5px 5px; background: #f0f2ef; }
+.result-track span { height: 100%; display: block; background: #158253; transition: width .4s ease; }
+.results-footer { margin-top: 17px; padding-top: 15px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #edf0ec; color: #738077; font-size: 10px; }
+.results-footer span:first-child { display: inline-flex; align-items: center; gap: 7px; }
+.results-footer svg { color: #168155; }
+
+.trust-strip { position: relative; margin: 21px 0 30px; min-height: 103px; padding: 20px 23px; display: flex; align-items: flex-start; gap: 14px; border: 1px solid #e6e9e4; border-radius: 5px; background: #f3f5f0; }
+.trust-icon { width: 29px; height: 29px; flex: 0 0 29px; display: grid; place-items: center; border-radius: 50%; background: #e3ece4; color: #31734d; }
+.trust-strip h3 { margin: 1px 0 5px; color: #33453a; font-size: 11px; font-weight: 700; }
+.trust-strip p { max-width: 770px; margin-bottom: 0; padding-right: 40px; color: #77817a; font-size: 10px; line-height: 1.65; }
+.nigeria-colors { position: absolute; top: 20px; right: 22px; height: 17px; display: flex; gap: 3px; opacity: .6; }
+.nigeria-colors span { width: 4px; height: 17px; background: #087b4c; }.nigeria-colors span:nth-child(2) { background: #cbd2cc; }.nigeria-colors span:nth-child(3) { background: #087b4c; }
+.footer { min-height: 62px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: #8a928c; font-size: 9px; }
+.footer-right { font-size: 8px; font-weight: 700; letter-spacing: 1.3px; }
+
+@media (min-width: 1200px) {
+  .hero { grid-template-columns: 1fr 415px; }
+  .hero-art { height: 286px; }
+}
+
+@media (max-width: 760px) {
+  .page-shell { padding: 0 24px; }
+  .hero { min-height: auto; padding: 46px 0 35px; grid-template-columns: 1fr 280px; gap: 15px; }
+  .hero-art { height: 235px; }
+  .art-number { top: 32px; font-size: 108px; }
+  .art-lines { left: 145px; }
+  .art-stamp { right: 15px; }
+  .hero-intro { font-size: 13px; }
+}
+
+@media (max-width: 600px) {
+  .page-shell { padding: 0 17px; }
+  .topbar { height: 70px; }
+  .brand { font-size: 16px; }
+  .top-link { font-size: 10px; }
+  .hero { padding: 36px 0 30px; grid-template-columns: 1fr; gap: 25px; }
+  h1 { margin-top: 17px; font-size: 61px; letter-spacing: -4px; }
+  .hero-intro { max-width: 420px; margin-bottom: 20px; }
+  .hero-art { height: 195px; }
+  .art-number { top: 12px; left: 24px; font-size: 112px; }
+  .art-caption { left: 30px; bottom: 20px; }
+  .art-lines { left: auto; right: 106px; bottom: 20px; transform: scale(.83); transform-origin: right bottom; }
+  .art-stamp { right: 18px; bottom: 18px; }
+  .poll-section { padding: 24px 16px 18px; }
+  .section-heading { align-items: center; }
+  h2 { font-size: 22px; }
+  .poll-tag { padding: 5px 6px; font-size: 7px; }
+  .candidate-card { min-height: 78px; padding: 12px 10px; gap: 10px; }
+  .candidate-avatar { flex-basis: 42px; height: 42px; }
+  .candidate-name { font-size: 12px; }
+  .candidate-detail { font-size: 9px; }
+  .party-pill { min-width: 35px; padding: 5px; font-size: 7px; }
+  .candidate-card.has-results { min-height: 89px; }
+  .form-footer { align-items: flex-start; flex-direction: column; }
+  .vote-button { width: 100%; }
+  .form-note { font-size: 9px; }
+  .trust-strip { padding: 16px 13px; gap: 10px; }
+  .trust-strip p { padding-right: 0; font-size: 9px; }
+  .trust-strip h3 { font-size: 10px; }
+  .nigeria-colors { display: none; }
+  .footer { min-height: 55px; font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
